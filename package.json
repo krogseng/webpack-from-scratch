@@ -1,0 +1,25 @@
+{
+  "name": "webpack-from-scratch",
+  "version": "1.0.0",
+  "description": "learning to build builds",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "start": "webpack-dev-server --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krogseng/webpack-from-scratch.git"
+  },
+  "author": "Lynn Krogseng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krogseng/webpack-from-scratch/issues"
+  },
+  "homepage": "https://github.com/krogseng/webpack-from-scratch#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
