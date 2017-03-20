@@ -1,7 +1,16 @@
+let path = require('path');
 module.exports = {
-    entry: 'src/index.js',
+    entry: './index.js',
     output: {
-        filename: 'bundle.js',
-        path: 'dist'
+        path: path.join(__dirname, 'dist/js'),
+        filename: 'bundle.js'
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.(js|jsx)$/, use: 'babel-loader'
+            }
+        ]
+
     }
-}
+};
