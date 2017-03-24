@@ -6,11 +6,17 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        loaders: [
-            {
-                test: /\.(js|jsx)$/, use: 'babel-loader'
-            }
+        rules: [{
+            enforce: 'pre',
+            test: /\.js$/,
+            loader: 'eslint-loader',
+            exclude: /node_modules/
+        },
+        {
+            test: /\.(js|jsx)$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+        }
         ]
-
     }
 };
