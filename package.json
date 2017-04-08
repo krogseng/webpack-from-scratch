@@ -6,10 +6,9 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "mocha",
-    "test:watch": "npm test -- -w",
-    "start": "webpack-dev-server --inline",
-    "build": "webpack --output-path build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --inline"
   },
   "repository": {
     "type": "git",
@@ -25,14 +24,17 @@
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.24.1",
     "chai": "^3.5.0",
     "css-loader": "^0.27.3",
     "eslint-loader": "^1.6.3",
     "eslint-plugin-react": "^6.10.3",
-    "node-sass": "^4.5.0",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.2",
     "sass-loader": "^6.0.3",
-    "style-loader": "^0.16.0",
+    "style-loader": "^0.16.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
   },

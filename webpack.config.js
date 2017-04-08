@@ -1,10 +1,20 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 let path = require('path');
 module.exports = {
-    entry: './index.js',
+    entry: [
+        path.join(__dirname, './index.js'),
+    ],
     output: {
-        path: path.join(__dirname, 'dist/js'),
+        path: path.join(__dirname, 'build'),
         filename: 'bundle.js'
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './src/index.html'
+        }),
+    ],
     module: {
         rules: [{
             enforce: 'pre',
@@ -15,6 +25,11 @@ module.exports = {
         {
             test: /\.(js|jsx)$/,
             loader: 'babel-loader',
+            exclude: /node_modules/,
+        },
+        {
+            test: /\.(css)$/,
+            loader: 'scss-loader',
             exclude: /node_modules/,
         }
         ]
